@@ -34,6 +34,10 @@ public class LearningCurve : MonoBehaviour
     public string rareItem = "Relic Stone";
     string characterAction = "Attack";
 
+    public Transform camTransform;
+    public GameObject directionLight;
+    public Transform lightTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,6 +100,49 @@ public class LearningCurve : MonoBehaviour
 
         // Time for action - tracking player lives
         HealthStatus();
+
+        // Time for action - creating a new character
+        Character hero = new Character();
+
+        // Time for action - fleshing out character details
+        //Debug.LogFormat("Hero: {0} - {1} EXP", hero.name, hero.exp);
+
+        // Time for action - specifying starting properties
+        Character heroine = new Character("Agatha");
+        //Debug.LogFormat("Hero: {0} - {1} EXP", heroine.name, heroine.exp);
+
+        // Time for action - printing out character data
+        hero.PrintStatsInfo();
+        heroine.PrintStatsInfo();
+
+        // Time for action - creating a weapon struct
+        Weapon huntingBow = new Weapon("Hunting Bow", 105);
+
+        // Time for action - creating a new hero
+        Character hero2 = hero;
+        hero2.name = "Sir Kane the Brave";
+        hero2.PrintStatsInfo();
+
+        // Time for action - copying weapons
+        Weapon warBow = huntingBow;
+        warBow.name = "War Bow";
+        warBow.damage = 155;
+
+        huntingBow.PrintWeaponStats();
+        warBow.PrintWeaponStats();
+
+        // Time for action - calling a base constructor
+        Paladin knight = new Paladin("Sir Arthur", huntingBow);
+        knight.PrintStatsInfo();
+
+        // Time for action - accessing the current transform component
+        camTransform = this.GetComponent<Transform>();
+        Debug.Log(camTransform.localPosition);
+
+        // Time for action - finding components on different objects
+        //directionLight = GameObject.Find("Directional Light");
+        lightTransform = directionLight.GetComponent<Transform>();
+        Debug.Log(lightTransform.localPosition);
     }
 
     public void HealthStatus()
@@ -204,7 +251,7 @@ public class LearningCurve : MonoBehaviour
     }
 
     /// <summary>
-    /// Time for action p. 45
+    /// Time for action - adding comments
     /// Computes a modified age integer
     /// </summary>
     void ComputeAge()
