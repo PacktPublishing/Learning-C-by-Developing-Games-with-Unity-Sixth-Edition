@@ -28,12 +28,6 @@ public class LearningCurve : MonoBehaviour
         ComputeAge();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     /// <summary>
     /// Time for action - adding comments
     /// Computes a modified age integer

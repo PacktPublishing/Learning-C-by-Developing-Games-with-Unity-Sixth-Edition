@@ -15,7 +15,7 @@ using UnityEngine;
 public class LearningCurve : MonoBehaviour
 {
     // Time for action - making a variable private
-    private int  = 30;
+    private int CurrentAge = 30;
     public int AddedAge = 1;
 
     // Time for action - playing with different types
