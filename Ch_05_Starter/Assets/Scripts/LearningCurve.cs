@@ -4,27 +4,27 @@ using UnityEngine;
 
 /// <summary>
 /// IMPORTANT!
-/// 
+///
 /// This first script will be a long one, so I've put comments to separate out each
 /// Time for Action sections.
 ///
 /// If you need to find a specific one in the book, use the table of contents and the
 /// Time for Action name :)
-/// 
+///
 /// </summary>
 public class LearningCurve : MonoBehaviour
 {
     // Time for action - making a variable private
-    private int currentAge = 30;
-    public int addedAge = 1;
+    private int CurrentAge = 30;
+    public int AddedAge = 1;
 
     // Time for action - playing with different types
-    public float pi = 3.14f;
-    public string firstName = "Harrison";
-    public bool isAuthor = true;
+    public float Pi = 3.14f;
+    public string FirstName = "Harrison";
+    public bool IsAuthor = true;
 
     // Other Time for action variables
-    public int currentGold = 32;
+    public int CurrentGold = 32;
     int diceRoll = 7;
     int playerLives = 3;
 
@@ -39,23 +39,23 @@ public class LearningCurve : MonoBehaviour
     {
         // Time for action - creating a variable
         Debug.Log(30 + 1);
-        Debug.Log(currentAge + 1);
+        Debug.Log(CurrentAge + 1);
 
         // Time for action - creating a simple method
         ComputeAge();
 
         // Time for action - creating interpolated strings
-        Debug.Log($"A string can have variables like {firstName} inserted directly!");
+        Debug.Log($"A string can have variables like {FirstName} inserted directly!");
 
         // Time for action - executing incorrect type operations
-        //Debug.Log(firstName * pi);
+        //Debug.Log(FirstName * Pi);
 
         // Time for action - defining a simple method
         //GenerateCharacter();
 
         // Time for action - adding a return type
         int characterLevel = 32;
-        int nextSkillLevel = GenerateCharacter("Spike", characterLevel);
+        int nextSkillLevel = GenerateCharacter("SPike", characterLevel);
 
         // Time for action - capturing return values
         Debug.Log(nextSkillLevel);
@@ -87,7 +87,7 @@ public class LearningCurve : MonoBehaviour
         {
             { "Potion", 5 },
             { "Antidote", 7 },
-            { "Aspirin", 1 }
+            { "AsPirin", 1 }
         };
         Debug.LogFormat("Items: {0}", itemInventory.Count);
 
@@ -170,7 +170,7 @@ public class LearningCurve : MonoBehaviour
         {
             if(!hasSecretIncantation)
             {
-                Debug.Log("You have the spirit, but not the knowledge.");
+                Debug.Log("You have the sPirit, but not the knowledge.");
             } else
             {
                 Debug.Log("The treasure is yours, worthy hero!");
@@ -183,10 +183,10 @@ public class LearningCurve : MonoBehaviour
 
     public void Thievery()
     {
-        if(currentGold > 50)
+        if(CurrentGold > 50)
         {
             Debug.Log("You're rolling in it!");
-        } else if (currentGold < 15)
+        } else if (CurrentGold < 15)
         {
             Debug.Log("Not much there to steal...");
         } else
@@ -209,6 +209,6 @@ public class LearningCurve : MonoBehaviour
     /// </summary>
     void ComputeAge()
     {
-        Debug.Log(currentAge + addedAge);
+        Debug.Log(CurrentAge + AddedAge);
     }
 }
