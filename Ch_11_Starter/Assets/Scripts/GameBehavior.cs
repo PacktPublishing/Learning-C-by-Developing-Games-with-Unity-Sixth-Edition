@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using CustomExtensions;
 
-public class GameBehavior : MonoBehaviour
+public class GameBehavior : MonoBehaviour, IManager
 {
     public int maxItems;
     public Text HealthText;
@@ -12,6 +13,13 @@ public class GameBehavior : MonoBehaviour
     public Text ProgressText;
     public Button WinButton;
     public Button LossButton;
+
+    private string _state;
+    public string State
+    {
+        get { return _state; }
+        set { _state = value; }
+    }
 
     private int _itemsCollected = 0;
     public int Items
@@ -34,7 +42,7 @@ public class GameBehavior : MonoBehaviour
         }
     }
 
-    private int _playerHP = 10;
+    private int _playerHP = 1;
     public int HP
     {
         get { return _playerHP; }
@@ -57,6 +65,18 @@ public class GameBehavior : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        _state = "Game Manager initialized..";
+        _state.FancyDebug();
+        Debug.Log(_state);
+    }
+
     public void UpdateScene(string updatedText)
     {
         ProgressText.text = updatedText;
@@ -65,7 +85,6 @@ public class GameBehavior : MonoBehaviour
 
     public void RestartScene()
     {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
+        Utilities.RestartLevel(0);
     }
 }

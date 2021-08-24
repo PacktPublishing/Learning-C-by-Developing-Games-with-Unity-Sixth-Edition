@@ -29,12 +29,6 @@ public static class Utilities
     // Time for action - overloading the level restart
     public static bool RestartLevel(int sceneIndex)
     {
-        // Time for action - checking negative scene indexes
-        if (sceneIndex < 0)
-        {
-            throw new System.ArgumentException("Scene index cannot be negative");
-        }
-
         SceneManager.LoadScene(sceneIndex);
         Time.timeScale = 1.0f;
 

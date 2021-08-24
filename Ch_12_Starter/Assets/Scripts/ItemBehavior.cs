@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemBehavior : MonoBehaviour
 {
-    // Time for action - updating item collection
     public GameBehavior gameManager;
 
     void Start()
@@ -12,7 +11,6 @@ public class ItemBehavior : MonoBehaviour
         gameManager = GameObject.Find("Game_Manager").GetComponent<GameBehavior>();
     }
 
-    // Time for action - picking up an item
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Player")

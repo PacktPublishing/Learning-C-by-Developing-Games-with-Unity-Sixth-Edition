@@ -28,10 +28,6 @@ public class PlayerBehavior : MonoBehaviour
     // Time for action - lowering player health
     private GameBehavior _gameManager;
 
-    // Time for action - creating an event
-    public delegate void JumpingEvent();
-    public event JumpingEvent playerJump;
-
     void Start()
     { 
         _rb = GetComponent<Rigidbody>();
@@ -56,7 +52,6 @@ public class PlayerBehavior : MonoBehaviour
         if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
-            playerJump();
         }
 
         if (Input.GetMouseButtonDown(0))
