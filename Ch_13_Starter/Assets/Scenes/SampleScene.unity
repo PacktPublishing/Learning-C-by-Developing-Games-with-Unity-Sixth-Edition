@@ -324,7 +324,6 @@ GameObject:
   - component: {fileID: 194711650}
   - component: {fileID: 194711649}
   - component: {fileID: 194711648}
-  - component: {fileID: 194711652}
   m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
@@ -410,29 +409,6 @@ Transform:
   m_Father: {fileID: 948815077}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &194711652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194711647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217ec36133fa4403ba779eb5136247ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addedAge: 1
-  pi: 3.14
-  firstName: Harrison
-  isAuthor: 1
-  currentGold: 32
-  pureOfHeart: 1
-  hasSecretIncantation: 0
-  rareItem: Relic Stone
-  camTransform: {fileID: 0}
-  directionLight: {fileID: 0}
-  lightTransform: {fileID: 0}
 --- !u!1 &208688140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,7 +1508,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 217ec36133fa4403ba779eb5136247ee, type: 3}
   m_Name: 

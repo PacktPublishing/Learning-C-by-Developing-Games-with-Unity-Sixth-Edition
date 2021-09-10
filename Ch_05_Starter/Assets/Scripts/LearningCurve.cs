@@ -136,7 +136,7 @@ public class LearningCurve : MonoBehaviour
         {
             if(!HasSecretIncantation)
             {
-                Debug.Log("You have the sPirit, but not the knowledge.");
+                Debug.Log("You have the spirit, but not the knowledge.");
             } else
             {
                 Debug.Log("The treasure is yours, worthy hero!");
@@ -157,7 +157,7 @@ public class LearningCurve : MonoBehaviour
             Debug.Log("Not much there to steal...");
         } else
         {
-            Debug.Log("Looks like your purse is in the sweet spot :)");
+            Debug.Log("Looks like your purse is in the sweet spot");
         }
     }
 
