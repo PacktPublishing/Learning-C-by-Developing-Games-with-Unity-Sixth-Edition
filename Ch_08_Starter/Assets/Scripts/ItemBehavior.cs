@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemBehavior : MonoBehaviour
 {
-    // Time for action - picking up an item
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Player")

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraBehavior : MonoBehaviour
 {
-    // Tiem for action - scripting camera behavior
     public Vector3 CamOffset = new Vector3(0f, 1.2f, -2.6f);
     private Transform _target;
 

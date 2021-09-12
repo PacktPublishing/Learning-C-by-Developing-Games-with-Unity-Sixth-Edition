@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class ItemRotation : MonoBehaviour
 {
-    // Time for action - animations in code
-    // 1
-    public int rotationSpeed = 100;
-    Transform itemTransform; 
+    public int RotationSpeed = 100;
+    Transform ItemTransform; 
 
     void Start()
     {
-        // 2
-        itemTransform = this.GetComponent<Transform>();
+        ItemTransform = this.GetComponent<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // 3
-        itemTransform.Rotate(rotationSpeed * Time.deltaTime, 0, 0);
+        ItemTransform.Rotate(RotationSpeed * Time.deltaTime, 0, 0);
     }
 }
