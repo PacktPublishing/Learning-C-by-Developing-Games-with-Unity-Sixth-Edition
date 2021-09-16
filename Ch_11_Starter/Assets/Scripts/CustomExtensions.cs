@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Time for action - extending the string class
 namespace CustomExtensions
 {
     public static class StringExtensions

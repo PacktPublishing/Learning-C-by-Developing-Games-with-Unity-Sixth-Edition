@@ -6,12 +6,18 @@ using UnityEngine.UI;
 
 public class GameBehavior : MonoBehaviour
 {
-    public int maxItems;
+    public int MaxItems = 4;
     public Text HealthText;
     public Text ItemText;
     public Text ProgressText;
     public Button WinButton;
     public Button LossButton;
+
+    void Start()
+    { 
+        ItemText.text += _itemsCollected;
+        HealthText.text += _playerHP;
+    }
 
     private int _itemsCollected = 0;
     public int Items
@@ -22,14 +28,14 @@ public class GameBehavior : MonoBehaviour
             _itemsCollected = value;
             ItemText.text = "Items Collected: " + Items;
 
-            if (_itemsCollected >= maxItems)
+            if (_itemsCollected >= MaxItems)
             {
                 WinButton.gameObject.SetActive(true);
                 UpdateScene("You've found all the items!");
             }
             else
             {
-                ProgressText.text = "Item found, only " + (maxItems - _itemsCollected) + " more to go!";
+                ProgressText.text = "Item found, only " + (MaxItems - _itemsCollected) + " more to go!";
             }
         }
     }

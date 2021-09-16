@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-// Time for action - creating a static class
 using UnityEngine.SceneManagement;
 
 public static class Utilities
 {
-    public static int playerDeaths = 0;
+    public static int PlayerDeaths = 0;
 
-    // Time for action - tracking player restarts
     public static string UpdateDeathCount(ref int countReference)
     {
         countReference += 1;
@@ -20,15 +17,15 @@ public static class Utilities
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1.0f;
-
-        Debug.Log("Player deaths: " + playerDeaths);
-        string message = UpdateDeathCount(ref playerDeaths);
-        Debug.Log("Player deaths: " + playerDeaths);
     }
 
-    // Time for action - overloading the level restart
     public static bool RestartLevel(int sceneIndex)
     {
+        Debug.Log("Player deaths: " + PlayerDeaths);
+        string message = UpdateDeathCount(ref PlayerDeaths);
+        Debug.Log("Player deaths: " + PlayerDeaths);
+        Debug.Log(message);
+
         SceneManager.LoadScene(sceneIndex);
         Time.timeScale = 1.0f;
 

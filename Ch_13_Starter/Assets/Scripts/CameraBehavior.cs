@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class CameraBehavior : MonoBehaviour
 {
-    // Tiem for action - scripting camera behavior
-    public Vector3 camOffset = new Vector3(0f, 1.2f, -2.6f);
-    private Transform target;
+    public Vector3 CamOffset = new Vector3(0f, 1.2f, -2.6f);
+    private Transform _target;
 
     void Start()
     {
-        target = GameObject.Find("Player").transform;
+        _target = GameObject.Find("Player").transform;
     }
 
     void LateUpdate()
     {
-        this.transform.position = target.TransformPoint(camOffset);
-        this.transform.LookAt(target);
+        this.transform.position = _target.TransformPoint(CamOffset);
+        this.transform.LookAt(_target);
     }
 }

@@ -5,22 +5,28 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using CustomExtensions;
 
-public class GameBehavior : MonoBehaviour
+public class GameBehavior : MonoBehaviour, IManager
 {
-    public Stack<string> lootStack = new Stack<string>();
-
-    public int maxItems;
+    public int MaxItems;
     public Text HealthText;
     public Text ItemText;
     public Text ProgressText;
     public Button WinButton;
     public Button LossButton;
+    public Stack<string> LootStack = new Stack<string>();
 
     private string _state;
     public string State
     {
         get { return _state; }
         set { _state = value; }
+    }
+
+    void Start()
+    { 
+        ItemText.text += _itemsCollected;
+        HealthText.text += _playerHP;
+        Initialize();
     }
 
     private int _itemsCollected = 0;
@@ -30,15 +36,16 @@ public class GameBehavior : MonoBehaviour
         set
         {
             _itemsCollected = value;
+            ItemText.text = "Items Collected: " + Items;
 
-            if (_itemsCollected >= maxItems)
+            if (_itemsCollected >= MaxItems)
             {
                 WinButton.gameObject.SetActive(true);
                 UpdateScene("You've found all the items!");
             }
             else
             {
-                ProgressText.text = "Item found, only " + (maxItems - _itemsCollected) + " more to go!";
+                ProgressText.text = "Item found, only " + (MaxItems - _itemsCollected) + " more to go!";
             }
         }
     }
@@ -50,6 +57,7 @@ public class GameBehavior : MonoBehaviour
         set
         {
             _playerHP = value;
+            HealthText.text = "Player Health: " + HP;
 
             if (_playerHP <= 0)
             {
@@ -61,12 +69,8 @@ public class GameBehavior : MonoBehaviour
                 ProgressText.text = "Ouch... that's got hurt.";
             }
 
+            Debug.LogFormat("Lives: {0}", _playerHP);
         }
-    }
-
-    void Start()
-    {
-        Initialize();
     }
 
     public void Initialize()
@@ -75,20 +79,20 @@ public class GameBehavior : MonoBehaviour
         _state.FancyDebug();
         Debug.Log(_state);
 
-        lootStack.Push("Sword of Doom");
-        lootStack.Push("HP Boost");
-        lootStack.Push("Golden Key");
-        lootStack.Push("Pair of Winged Boot");
-        lootStack.Push("Mythril Bracer");
+        LootStack.Push("Sword of Doom");
+        LootStack.Push("HP Boost");
+        LootStack.Push("Golden Key");
+        LootStack.Push("Pair of Winged Boot");
+        LootStack.Push("Mythril Bracer");
     }
 
     public void PrintLootReport()
     {
-        var currentItem = lootStack.Pop();
-        var nextItem = lootStack.Peek();
+        var currentItem = LootStack.Pop();
+        var nextItem = LootStack.Peek();
 
         Debug.LogFormat("You got a {0}! You've got a good chance of finding a {1} next!", currentItem, nextItem); 
-        Debug.LogFormat("There are {0} random loot items waiting for you!", lootStack.Count); 
+        Debug.LogFormat("There are {0} random loot items waiting for you!", LootStack.Count); 
     }
 
     public void UpdateScene(string updatedText)
