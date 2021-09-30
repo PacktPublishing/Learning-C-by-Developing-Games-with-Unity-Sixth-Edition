@@ -303,7 +303,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player Health: 10'
+  m_Text: 'Player Health: '
 --- !u!222 &112771715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Items Collected: 0'
+  m_Text: 'Items Collected: '
 --- !u!222 &473195820
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -894,6 +894,7 @@ MonoBehaviour:
   ProgressText: {fileID: 1824946293}
   WinButton: {fileID: 1797117549}
   LossButton: {fileID: 1743911510}
+  playerBehavior: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,11 +2681,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2300193022312541845, guid: f74f0eacd0558443e9de22146ba250e4, type: 3}
   m_PrefabInstance: {fileID: 1883024211}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1957623710 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7428659371354900447, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
-  m_PrefabInstance: {fileID: 7428659371573036422}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2083103664
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,6 +3033,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
+--- !u!4 &7428659371573036423 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7428659371354900447, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
+  m_PrefabInstance: {fileID: 7428659371573036422}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7900421117228029793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3095,7 +3096,7 @@ PrefabInstance:
     - target: {fileID: 7900421117269679893, guid: 95cda2d951edf4236b4c574e4ba7368b, type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 1957623710}
+      objectReference: {fileID: 7428659371573036423}
     - target: {fileID: 7900421117269679893, guid: 95cda2d951edf4236b4c574e4ba7368b, type: 3}
       propertyPath: PatrolRoute
       value: 
