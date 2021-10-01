@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab0976b95b7a4906b0b54ccc66ddf33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxItems: 4
+  MaxItems: 1
   HealthText: {fileID: 706679779}
   ItemText: {fileID: 1410260421}
   ProgressText: {fileID: 17285054}
@@ -2947,12 +2947,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7428659371354900444, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7428659371354900445, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 5223803857962238275, guid: a146a17815a82496e83b7d3154b48e3f, type: 3}
     - target: {fileID: 7428659371354900445, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 5223803857962238275, guid: a146a17815a82496e83b7d3154b48e3f, type: 3}
+    - target: {fileID: 7428659371354900445, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
+      propertyPath: GroundLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 7428659371354900445, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 64

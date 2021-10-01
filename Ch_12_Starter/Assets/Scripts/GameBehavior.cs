@@ -82,7 +82,7 @@ public class GameBehavior : MonoBehaviour, IManager
         LootStack.Push("Sword of Doom");
         LootStack.Push("HP Boost");
         LootStack.Push("Golden Key");
-        LootStack.Push("Pair of Winged Boot");
+        LootStack.Push("Pair of Winged Boots");
         LootStack.Push("Mythril Bracer");
     }
 

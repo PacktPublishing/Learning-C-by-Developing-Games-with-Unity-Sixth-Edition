@@ -54,6 +54,7 @@ public class DataManager : MonoBehaviour, IManager
 
         FilesystemInfo();
         NewDirectory();
+        WriteToXML(_xmlLevelProgress);
         SerializeJSON();
         DeserializeJSON();
         DeserializeXML();
@@ -111,7 +112,7 @@ public class DataManager : MonoBehaviour, IManager
             return;
         }
 
-        File.AppendAllText(_textFile, "Game started: " + DateTime.Now + "\n");
+        File.AppendAllText(_textFile, $"Game started: {DateTime.Now}\n");
         Debug.Log("File updated successfully!");
     }
 
@@ -219,6 +220,7 @@ public class DataManager : MonoBehaviour, IManager
 
     public void SerializeJSON()
     {
+        // Weapon sword = new Weapon("Sword of Doom", 100);
         WeaponShop shop = new WeaponShop();
         shop.inventory = weaponInventory;
 
