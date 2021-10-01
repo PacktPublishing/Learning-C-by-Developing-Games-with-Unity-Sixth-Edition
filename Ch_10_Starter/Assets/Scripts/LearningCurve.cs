@@ -48,14 +48,7 @@ public class LearningCurve : MonoBehaviour
         OpenTreasureChamber();
         PrintCharacterAction();
         RollDice();
-
-        List<string> questPartyMembers = new List<string>()
-        {
-            "Grim the Barbarian",
-            "Merlin the Wise",
-            "Sterling the Knight"
-        };
-        Debug.LogFormat("Party Members: {0}", questPartyMembers.Count);
+	FindPartyMember();
 
         Dictionary<string, int> itemInventory = new Dictionary<string, int>()
         {
