@@ -51,7 +51,7 @@ public class PlayerBehavior : MonoBehaviour
 
         if (_isShooting)
         {
-            GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(1, 0, 0), this.transform.rotation) as GameObject;
+            GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(1, 0, 0), this.transform.rotation);
             Rigidbody bulletRB = newBullet.GetComponent<Rigidbody>();
             bulletRB.velocity = this.transform.forward * BulletSpeed;
         }
