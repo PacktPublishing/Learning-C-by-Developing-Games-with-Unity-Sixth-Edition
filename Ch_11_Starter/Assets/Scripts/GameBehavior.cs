@@ -7,7 +7,7 @@ using CustomExtensions;
 
 public class GameBehavior : MonoBehaviour, IManager
 {
-    public int maxItems;
+    public int MaxItems = 4;
     public Text HealthText;
     public Text ItemText;
     public Text ProgressText;
@@ -21,6 +21,20 @@ public class GameBehavior : MonoBehaviour, IManager
         set { _state = value; }
     }
 
+    void Start()
+    { 
+        ItemText.text += _itemsCollected;
+        HealthText.text += _playerHP;
+        Initialize();
+    }
+
+    public void Initialize()
+    {
+        _state = "Game Manager initialized..";
+        _state.FancyDebug();
+        Debug.Log(_state);
+    }
+
     private int _itemsCollected = 0;
     public int Items
     {
@@ -30,19 +44,19 @@ public class GameBehavior : MonoBehaviour, IManager
             _itemsCollected = value;
             ItemText.text = "Items Collected: " + Items;
 
-            if (_itemsCollected >= maxItems)
+            if (_itemsCollected >= MaxItems)
             {
                 WinButton.gameObject.SetActive(true);
                 UpdateScene("You've found all the items!");
             }
             else
             {
-                ProgressText.text = "Item found, only " + (maxItems - _itemsCollected) + " more to go!";
+                ProgressText.text = "Item found, only " + (MaxItems - _itemsCollected) + " more to go!";
             }
         }
     }
 
-    private int _playerHP = 1;
+    private int _playerHP = 10;
     public int HP
     {
         get { return _playerHP; }
@@ -63,18 +77,6 @@ public class GameBehavior : MonoBehaviour, IManager
 
             Debug.LogFormat("Lives: {0}", _playerHP);
         }
-    }
-
-    void Start()
-    {
-        Initialize();
-    }
-
-    public void Initialize()
-    {
-        _state = "Game Manager initialized..";
-        _state.FancyDebug();
-        Debug.Log(_state);
     }
 
     public void UpdateScene(string updatedText)

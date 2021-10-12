@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ItemBehavior : MonoBehaviour
 {
-    public GameBehavior gameManager;
+    public GameBehavior GameManager;
 
     void Start()
     {
-        gameManager = GameObject.Find("Game_Manager").GetComponent<GameBehavior>();
+        GameManager = GameObject.Find("Game_Manager").GetComponent<GameBehavior>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -18,8 +18,8 @@ public class ItemBehavior : MonoBehaviour
             Destroy(this.transform.gameObject);
             Debug.Log("Item collected!");
 
-            gameManager.Items += 1;
-            gameManager.PrintLootReport();
+            GameManager.Items += 1;
+            GameManager.PrintLootReport();
         }
     }
 }

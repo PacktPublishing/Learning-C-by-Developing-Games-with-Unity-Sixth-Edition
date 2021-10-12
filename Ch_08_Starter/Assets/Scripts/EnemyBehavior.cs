@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    // Time for action - capturing trigger events
     void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public static class Utilities
 {
-    public static int playerDeaths = 0;
+    public static int PlayerDeaths = 0;
 
     public static string UpdateDeathCount(ref int countReference)
     {
@@ -21,9 +21,9 @@ public static class Utilities
 
     public static bool RestartLevel(int sceneIndex)
     {
-        Debug.Log("Player deaths: " + playerDeaths);
-        string message = UpdateDeathCount(ref playerDeaths);
-        Debug.Log("Player deaths: " + playerDeaths);
+        Debug.Log("Player deaths: " + PlayerDeaths);
+        string message = UpdateDeathCount(ref PlayerDeaths);
+        Debug.Log("Player deaths: " + PlayerDeaths);
         Debug.Log(message);
 
         SceneManager.LoadScene(sceneIndex);

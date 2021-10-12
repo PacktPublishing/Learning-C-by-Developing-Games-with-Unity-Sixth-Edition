@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
-    // Time for action - destroying bullets
-    public float onscreenDelay = 3f;
+    public float OnscreenDelay = 3f;
 
     void Start()
     {
-        Destroy(this.gameObject, onscreenDelay);
+        Destroy(this.gameObject, OnscreenDelay);
     }
 }

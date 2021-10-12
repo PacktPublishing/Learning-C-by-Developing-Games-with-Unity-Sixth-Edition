@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Time for action - creating a weapon struct
 public struct Weapon
 {
     public string name;

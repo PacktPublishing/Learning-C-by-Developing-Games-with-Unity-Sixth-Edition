@@ -403,7 +403,6 @@ GameObject:
   - component: {fileID: 194711650}
   - component: {fileID: 194711649}
   - component: {fileID: 194711648}
-  - component: {fileID: 194711652}
   m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
@@ -489,29 +488,6 @@ Transform:
   m_Father: {fileID: 948815077}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &194711652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194711647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217ec36133fa4403ba779eb5136247ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addedAge: 1
-  pi: 3.14
-  firstName: Harrison
-  isAuthor: 1
-  currentGold: 32
-  pureOfHeart: 1
-  hasSecretIncantation: 0
-  rareItem: Relic Stone
-  camTransform: {fileID: 0}
-  directionLight: {fileID: 0}
-  lightTransform: {fileID: 0}
 --- !u!1 &208688140
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +763,11 @@ Transform:
   m_Father: {fileID: 948815077}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!4 &393440779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7428659371354900447, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
+  m_PrefabInstance: {fileID: 7428659371573036422}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410355448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,11 +1039,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab0976b95b7a4906b0b54ccc66ddf33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxItems: 1
+  MaxItems: 1
   HealthText: {fileID: 706679779}
   ItemText: {fileID: 1410260421}
   ProgressText: {fileID: 17285054}
-  WinButton: {fileID: 0}
+  WinButton: {fileID: 1309382785}
   LossButton: {fileID: 1083410650}
 --- !u!114 &508013600
 MonoBehaviour:
@@ -1239,7 +1220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player Health: 10'
+  m_Text: 'Player Health:'
 --- !u!222 &706679780
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1652,17 +1633,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217ec36133fa4403ba779eb5136247ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedAge: 1
-  pi: 3.14
-  firstName: Harrison
-  isAuthor: 1
-  currentGold: 32
-  pureOfHeart: 1
-  hasSecretIncantation: 0
-  rareItem: Relic Stone
-  camTransform: {fileID: 0}
-  directionLight: {fileID: 705507993}
-  lightTransform: {fileID: 0}
+  AddedAge: 1
+  Pi: 3.14
+  FirstName: Harrison
+  IsAuthor: 1
+  CurrentGold: 32
+  PureOfHeart: 1
+  HasSecretIncantation: 0
+  RareItem: Relic Stone
+  CamTransform: {fileID: 0}
+  DirectionLight: {fileID: 705507993}
+  LightTransform: {fileID: 0}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,7 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ee534d7a9e54ac1bd5b47e4dd5c983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camOffset: {x: 0, y: 1.2, z: -2.6}
+  CamOffset: {x: 0, y: 1.2, z: -2.6}
 --- !u!1 &983104441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,7 +2351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Items Collected: 0'
+  m_Text: 'Items Collected:'
 --- !u!222 &1410260422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2964,10 +2945,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7428659371354900444, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428659371354900445, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 5223803857962238275, guid: a146a17815a82496e83b7d3154b48e3f, type: 3}
     - target: {fileID: 7428659371354900445, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 5223803857962238275, guid: a146a17815a82496e83b7d3154b48e3f, type: 3}
+    - target: {fileID: 7428659371354900445, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
+      propertyPath: GroundLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 7428659371354900445, guid: 18c65bf4c443c4a67a13239331f2ce09, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 64
@@ -3073,6 +3066,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7900421117269679893, guid: 95cda2d951edf4236b4c574e4ba7368b, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 393440779}
+    - target: {fileID: 7900421117269679893, guid: 95cda2d951edf4236b4c574e4ba7368b, type: 3}
+      propertyPath: PatrolRoute
+      value: 
+      objectReference: {fileID: 208688141}
     - target: {fileID: 7900421117269679893, guid: 95cda2d951edf4236b4c574e4ba7368b, type: 3}
       propertyPath: patrolRoute
       value: 

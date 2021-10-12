@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class ItemBehavior : MonoBehaviour
 {
-    // Time for action - updating item collection
-    public GameBehavior gameManager;
+    public GameBehavior GameManager;
 
     void Start()
     {
-        gameManager = GameObject.Find("Game_Manager").GetComponent<GameBehavior>();
+        GameManager = GameObject.Find("Game_Manager").GetComponent<GameBehavior>();
     }
 
-    // Time for action - picking up an item
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Player")
@@ -20,7 +18,7 @@ public class ItemBehavior : MonoBehaviour
             Destroy(this.transform.gameObject);
             Debug.Log("Item collected!");
 
-            gameManager.Items += 1;
+            GameManager.Items += 1;
         }
     }
 }
