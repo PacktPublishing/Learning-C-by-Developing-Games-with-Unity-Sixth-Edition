@@ -993,17 +993,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 217ec36133fa4403ba779eb5136247ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedAge: 1
-  pi: 3.14
-  firstName: Harrison
-  isAuthor: 1
-  currentGold: 32
-  pureOfHeart: 1
-  hasSecretIncantation: 0
-  rareItem: Relic Stone
-  camTransform: {fileID: 0}
-  directionLight: {fileID: 705507993}
-  lightTransform: {fileID: 0}
+  AddedAge: 1
+  Pi: 3.14
+  FirstName: Harrison
+  IsAuthor: 1
+  CurrentGold: 32
+  PureOfHeart: 1
+  HasSecretIncantation: 0
+  RareItem: Relic Stone
+  CamTransform: {fileID: 0}
+  DirectionLight: {fileID: 705507993}
+  LightTransform: {fileID: 0}
 --- !u!1 &1044250731
 GameObject:
   m_ObjectHideFlags: 0
