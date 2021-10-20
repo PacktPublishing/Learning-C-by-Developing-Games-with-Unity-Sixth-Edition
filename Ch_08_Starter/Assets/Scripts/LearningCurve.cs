@@ -48,15 +48,15 @@ public class LearningCurve : MonoBehaviour
         OpenTreasureChamber();
         PrintCharacterAction();
         RollDice();
-	FindPartyMember();
+	    FindPartyMember();
 
-        Dictionary<string, int> itemInventory = new Dictionary<string, int>()
+        Dictionary<string, int> ItemInventory = new Dictionary<string, int>()
         {
             { "Potion", 5 },
             { "Antidote", 7 },
             { "Aspirin", 1 }
         };
-        Debug.LogFormat("Items: {0}", itemInventory.Count);
+        Debug.LogFormat("Items: {0}", ItemInventory.Count);
 
         FindPartyMember();
         HealthStatus();
@@ -73,7 +73,7 @@ public class LearningCurve : MonoBehaviour
         Weapon huntingBow = new Weapon("Hunting Bow", 105);
 
         Character hero2 = hero;
-        hero2.name = "Sir Kane the Brave";
+        hero2.name = "Sir Krane the Brave";
         hero2.PrintStatsInfo();
 
         Weapon warBow = huntingBow;
@@ -107,19 +107,19 @@ public class LearningCurve : MonoBehaviour
 
     public void FindPartyMember()
     {
-        List<string> questPartyMembers = new List<string>()
+        List<string> QuestPartyMembers = new List<string>()
         {
             "Grim the Barbarian",
             "Merlin the Wise",
             "Sterling the Knight"
         };
-        Debug.LogFormat("Party Members: {0}", questPartyMembers.Count);
+        Debug.LogFormat("Party Members: {0}", QuestPartyMembers.Count);
 
-        for(int i = 0; i < questPartyMembers.Count; i++)
+        for(int i = 0; i < QuestPartyMembers.Count; i++)
         {
-            Debug.LogFormat("Index: {0} - {1}", i, questPartyMembers[i]);
+            Debug.LogFormat("Index: {0} - {1}", i, QuestPartyMembers[i]);
 
-            if(questPartyMembers[i] == "Merlin the Wise")
+            if(QuestPartyMembers[i] == "Merlin the Wise")
             {
                 Debug.Log("Glad you're here Merlin!");
             }
