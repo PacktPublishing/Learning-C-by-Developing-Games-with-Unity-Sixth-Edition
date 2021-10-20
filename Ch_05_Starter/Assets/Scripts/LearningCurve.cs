@@ -44,7 +44,7 @@ public class LearningCurve : MonoBehaviour
         OpenTreasureChamber();
         PrintCharacterAction();
         RollDice();
-	FindPartyMember();
+	    FindPartyMember();
 
         Dictionary<string, int> ItemInventory = new Dictionary<string, int>()
         {
