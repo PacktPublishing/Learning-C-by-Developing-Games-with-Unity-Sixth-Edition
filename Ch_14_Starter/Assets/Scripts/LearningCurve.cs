@@ -5,8 +5,7 @@ using UnityEngine;
 public class LearningCurve : MonoBehaviour
 {
     private int CurrentAge = 30;
-    public int AddedAge = 1;
-
+    public int AddedAge = 1; 
     public float Pi = 3.14f;
     public string FirstName = "Harrison";
     public bool IsAuthor = true;
