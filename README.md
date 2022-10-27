@@ -20,3 +20,7 @@ By the end of the book, you will have developed the skills to become proficient 
 5. Become familiar with stacks, queues, exceptions, error handling, and other core C# concepts
 6. Learn how to handle text, XML, and JSON data to save and load your game data
 7. Explore the basics of AI for games and implement them to control enemy behavior
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801813945">https://packt.link/free-ebook/9781801813945 </a> </p>
